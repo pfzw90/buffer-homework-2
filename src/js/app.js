@@ -1,8 +1,6 @@
-import getBuffer from './getBuffer';
-
 export default class ArrayBufferConverter {
-  load(string) {
-    this.buffer = getBuffer(string);
+  load(buffer) {
+    this.buffer = buffer;
   }
 
   toString() {

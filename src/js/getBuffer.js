@@ -1,4 +1,5 @@
-export default function getBuffer(string) {
+export default function getBuffer() {
+  const data = '{"data":{"user":{"id":1,"name":"Hitman","level":10}}}';
   return ((input) => {
     const buffer = new ArrayBuffer(input.length * 2);
     const bufferView = new Uint16Array(buffer);
@@ -6,5 +7,5 @@ export default function getBuffer(string) {
       bufferView[i] = input.charCodeAt(i);
     }
     return buffer;
-  })(string);
+  })(data);
 }
